@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lesson 11 - Form Validation and other Future HTML5 Form Enhancements</title>
+  <style type="text/css" media="all">
+    span {
+      width: 175px;
+      display:block;
+      float:left;
+    }
+    input {
+      float:left;
+    }
+    p {
+      padding-top:10px;
+      clear: all;
+    }
+    h2 {
+      padding-top:20px;
+      clear: all;
+    }
+    label {
+      padding-right:20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Creating Forms</h1>
+
+<form method="POST" action="form.aspx">
+  <h2>Email
+  </h2>
+  <p>
+   <label>
+    <span>Email Input: 
+    </span>
+    <input type="email" name="email_input" required>
+    </input>
+   </label>
+  </p>
+  
+  <h2>Telephone
+  </h2>
+  <p>
+   <label>
+    <span>Telephone Input:
+    </span>
+    <input type="tel" name="tel_input" required>
+    </input>
+   </label>
+  </p>
+
+  <h2>URL
+  </h2>
+  <p>
+   <label>
+    <span>URL Input: 
+    </span>
+    <input type="url" name="url_input" required>
+    </input>
+   </label>
+  </p>
+
+ <h2>Numeric 
+  </h2>
+  <p>
+   <label>
+    <span>Numeric Input: 
+    </span>
+    <input type="number" name="number_input" required>
+    </input>
+   </label>
+  </p>
+
+  <h2>Range
+  </h2>
+  <p>
+   <label>
+    <span>Range Input: 
+    </span>
+    <input type="range" name="range_input" value="42" required>
+    </input>
+   </label> Value set to 42.  By default values accepted is between 0 and 100.
+  </p>
+
+  <h2>Data List
+  </h2>
+  <p>
+   <label>
+    <span>Data List: 
+    </span>
+    <input type="text" name="datalist_input" list="some_list" required>
+     <datalist id="some_list">
+      <option label="" value="">
+      </option>
+      <option label="First" value="First">
+      </option>
+      <option label="Second" value="Second">
+      </option>
+      <option label="Third" value="Third">
+      </option>
+     </datalist>
+    </input>
+   </label>
+  </p>
+ 
+  <h2>Attributes 
+  </h2>
+  <p>
+   <label>
+    <span>Autofocus:
+    </span>
+    <input type="text" autofocus>
+    </input>
+   </label>
+  </p>
+  
+  <p>
+   <label>
+    <span>Pattern: 
+    </span>
+    <input type="text" pattern="^\d{5}(-d{4})?$"> 
+    </input>
+   </label> Hint: Use A Zip Code
+  </p>
+
+  <p>
+   <label>
+    <span>Placeholder:
+    </span>
+    <input type="text" placeholder="Hello World">
+    </input>
+   </label>
+  </p>
+
+  <p>
+   <label>
+    <span>Required: 
+    </span>
+    <input type="text" required>
+    </input>
+   </label>
+  </p>
+
+  <p>
+   <label>
+    <span>Step:
+    </span>
+    <input type="number" step="5">
+    </input>
+   </label> Hint: Must be deivisible by 5
+  </p>
+
+<p><button>Submit</button></p>
+
+</form>
+
+</body>
+</html>
